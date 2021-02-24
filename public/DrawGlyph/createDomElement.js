@@ -34,10 +34,10 @@ export function createCircleElement(x, y, r = 3, stroke = "#ffffff", fill = "tra
     return element;
 }
 
-export function createRectElement(x1, x2, y1, y2, stroke = "#ffffff", fill = "transparent") {
+export function createRectElement(x, y, width, height, stroke = "#ffffff", fill = "transparent") {
     var element = document.createElementNS(NAMESPACE, "rect");
-    element.setAttribute("x", x1);
-    element.setAttribute("y", y1);
+    element.setAttribute("x", x);
+    element.setAttribute("y", y);
     setSizeElement(element, width, height);
     setStyleElement(element, stroke, fill);
     return element;
