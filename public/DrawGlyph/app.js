@@ -10,7 +10,9 @@ class App {
         this.font = font;
 
         this.bgSVG = create.createSVGElement(0, 0);
+        this.bgSVG.setAttribute('id', 'bgSVG');
         document.body.appendChild(this.bgSVG);
+
         this.domGroup = create.createGroupElement();
         this.domGroup.setAttribute('id', 'domGroup')
         this.bgSVG.appendChild(this.domGroup);
@@ -29,7 +31,7 @@ class App {
     }
 
     getInput() {
-        this.char = document.getElementById('inputChar').value;
+        this.str = document.getElementById('inputStr').value;
         var fontSize = parseInt(document.getElementById('inputSize').value);
         if (isNaN(fontSize)) {
             return false;
@@ -38,12 +40,12 @@ class App {
         }
 
         // Find the real size of glyph
-        var tempCharPath = this.font.getPath(this.char, 0, 0, this.fontSize);
-        var charBox = tempCharPath.getBoundingBox();
+        var tempStrPath = this.font.getPath(this.str, 0, 0, this.fontSize);
+        var strBox = tempStrPath.getBoundingBox();
 
         // Apply the discovered size
-        this.charPath = this.font.getPath(this.char, -charBox.x1, -charBox.y1, this.fontSize);
-        this.charBox = this.charPath.getBoundingBox();
+        this.strPath = this.font.getPath(this.str, -strBox.x1, -strBox.y1, this.fontSize);
+        this.strBox = this.strPath.getBoundingBox();
 
         // glyph = font.charToGlyph(str)
         // path = glyph.getPath()
@@ -56,7 +58,7 @@ class App {
             this.domGroup.removeChild(child);
         }
 
-        this.data = create.getDataFromCommands(this.charPath.commands);
+        this.data = create.getDataFromCommands(this.strPath.commands);
         this.dGroup = this.data[0];
         this.directPoints = this.data[1];
         this.indirectPoints = this.data[2];
@@ -82,8 +84,8 @@ class App {
     }
 
     replaceGlyph() {
-        var glpyhWidth = this.charBox.x2 - this.charBox.x1;
-        var glyphHeight = this.charBox.y2 - this.charBox.y1;
+        var glpyhWidth = this.strBox.x2 - this.strBox.x1;
+        var glyphHeight = this.strBox.y2 - this.strBox.y1;
         var windowWidth = window.innerWidth;
         var windowHeight = window.innerHeight;
 
