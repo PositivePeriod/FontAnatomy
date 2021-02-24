@@ -1,5 +1,7 @@
 import * as create from './createDomElement.js'
 
+const CircleRadius = 3;
+
 async function loadFontFromUrl(url) {
     var font = await opentype.load(url);
     return font;
@@ -71,19 +73,27 @@ class App {
         var domDirect = create.createGroupElement();
         domDirect.setAttribute('id', 'directPoints')
         this.directPoints.forEach(point => {
-            domDirect.appendChild(create.createCircleElement(point.x, point.y, 1, '#ff0000'));
+            var circle = create.createCircleElement(point.x, point.y, CircleRadius);
+            circle.classList.add('direct');
+            domDirect.appendChild(circle);
         })
         this.domGroup.appendChild(domDirect);
 
         var domIndirect = create.createGroupElement();
-        domIndirect.setAttribute('id', 'indirectPoints')
+        domIndirect.setAttribute('id', 'indirectPoints');
         this.indirectPoints.forEach(point => {
-            domIndirect.appendChild(create.createCircleElement(point.x, point.y, 1, '#00ff00'));
+            var circle = create.createCircleElement(point.x, point.y, CircleRadius);
+            circle.classList.add('indirect');
+            domIndirect.appendChild(circle);
         })
         this.domGroup.appendChild(domIndirect);
     }
 
     replaceGlyph() {
+        var existEdge = this.domGroup.querySelector(".edge");
+        if (existEdge) {
+            existEdge.remove();
+        }        
         var glpyhWidth = this.strBox.x2 - this.strBox.x1;
         var glyphHeight = this.strBox.y2 - this.strBox.y1;
         var windowWidth = window.innerWidth;
@@ -97,7 +107,13 @@ class App {
         this.bgSVG.setAttribute('width', windowWidth);
         this.bgSVG.setAttribute('height', windowHeight);
 
-        this.domGroup.setAttribute("transform", `translate(${(windowWidth - glpyhWidth) / 2}, ${(windowHeight - glyphHeight) / 2})`);
+        var posX = (windowWidth - glpyhWidth) / 2;
+        var poxY = (windowHeight - glyphHeight) / 2;
+        this.domGroup.setAttribute("transform", `translate(${posX}, ${poxY})`);
+
+        var edge = create.createRectElement(0, 0, glpyhWidth, glyphHeight);
+        edge.classList.add('edge')
+        this.domGroup.appendChild(edge);
     }
 
 }
