@@ -1,0 +1,34 @@
+* {
+    user-select: none;
+    outline: 0;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: #ff0000;
+}
+
+svg {
+    background-color: #001aff;
+}
+
+rect {
+    background-color: #00ffb3;
+}
+
+path {
+    background-color: #ff6600;
+}
+
+circle {
+    background-color: #ff00ff;
+}
