@@ -1,5 +1,8 @@
+const NAMESPACE = "http://www.w3.org/2000/svg";
+
+
 export function createSVGElement(width, height, stroke = '#"ffffff"', fill = 'transparent') {
-    var element = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+    var element = document.createElementNS(NAMESPACE, "svg");
     element.setAttribute("width", width);
     element.setAttribute("height", height);
     element.setAttribute("stroke", stroke);
@@ -8,7 +11,7 @@ export function createSVGElement(width, height, stroke = '#"ffffff"', fill = 'tr
 }
 
 export function createPathElement(d, width, height, stroke = '#ffffff', fill = 'transparent') {
-    var element = document.createElementNS("http://www.w3.org/2000/svg", "path");
+    var element = document.createElementNS(NAMESPACE, "path");
     element.setAttribute("d", d)
     element.setAttribute("width", width);
     element.setAttribute("height", height);
@@ -18,7 +21,7 @@ export function createPathElement(d, width, height, stroke = '#ffffff', fill = '
 }
 
 export function createCircleElement(x, y, r = 3, stroke = '#ffffff', fill = 'transparent') {
-    var element = document.createElementNS("http://www.w3.org/2000/svg", "circle");
+    var element = document.createElementNS(NAMESPACE, "circle");
     element.setAttribute("cx", x);
     element.setAttribute("cy", y);
     element.setAttribute("r", r);
@@ -28,7 +31,7 @@ export function createCircleElement(x, y, r = 3, stroke = '#ffffff', fill = 'tra
 }
 
 export function createRectElement(x1, x2, y1, y2, stroke = '#ffffff', fill = 'transparent') {
-    var element = document.createElementNS("http://www.w3.org/2000/svg", "rect");
+    var element = document.createElementNS(NAMESPACE, "rect");
     element.setAttribute("x", x1);
     element.setAttribute("y", y1);
     element.setAttribute("width", x2 - x1);
@@ -39,7 +42,7 @@ export function createRectElement(x1, x2, y1, y2, stroke = '#ffffff', fill = 'tr
 }
 
 export function createGroupElement(stroke = '#ffffff', fill = 'transparent') {
-    var element = document.createElementNS("http://www.w3.org/2000/svg", "g");
+    var element = document.createElementNS(NAMESPACE, "g");
     element.setAttribute("stroke", stroke);
     element.setAttribute("fill", fill);
     return element;
