@@ -28,8 +28,19 @@ class App {
 
     updateGlyph() {
         this.getInput();
-        this.createDOMElements();
-        this.replaceGlyph();
+        var pointData = this.createDOMElements();
+        var directPoints = pointData['direct'];
+        var indirectPoints = pointData['indirect'];
+
+        var glyphData = this.replaceGlyph();
+        var glpyhWidth = glyphData['width'];
+        var glyphHeight = glyphData['height'];
+
+        var glyphArea = directPoints.length !== 0? Math.abs(polygonArea(directPoints)): 0;
+        var boxArea = glpyhWidth? glpyhWidth * glyphHeight: 0;
+        // console.log(this.str, glyphArea, boxArea, glyphArea/boxArea);
+        console.log(this.str, (glyphArea/boxArea*100).toFixed(2));
+
     }
 
     getInput() {
@@ -87,20 +98,21 @@ class App {
             domIndirect.appendChild(circle);
         })
         this.domGroup.appendChild(domIndirect);
+        return { direct: this.directPoints, indirect: this.indirectPoints, }
     }
 
     replaceGlyph() {
         var existEdge = this.domGroup.querySelector(".edge");
         if (existEdge) {
             existEdge.remove();
-        }        
+        }
         var glpyhWidth = this.strBox.x2 - this.strBox.x1;
         var glyphHeight = this.strBox.y2 - this.strBox.y1;
         var windowWidth = window.innerWidth;
         var windowHeight = window.innerHeight;
 
-        console.log('glyph', glpyhWidth, glyphHeight);
-        console.log('window', windowWidth, windowHeight);
+        // console.log('glyph', glpyhWidth, glyphHeight);
+        // console.log('window', windowWidth, windowHeight);
 
         this.bgSVG.setAttribute('x', 0);
         this.bgSVG.setAttribute('y', 0);
@@ -114,12 +126,25 @@ class App {
         var edge = create.createRectElement(0, 0, glpyhWidth, glyphHeight);
         edge.classList.add('edge')
         this.domGroup.appendChild(edge);
+        return { width: glpyhWidth, height: glyphHeight }
     }
 
 }
 
+function polygonArea(pts) {
+    var area = 0;
+    for (let i = 0; i < pts.length - 1; i++) {
+        area += (pts[i + 1].x + pts[i].x) * (pts[i + 1].y - pts[i].y);
+    }
+    area += (pts[0].x + pts[pts.length - 1].x) * (pts[0].y - pts[pts.length - 1].y);
+    return area / 2;
+}
+
 window.onload = () => {
     var fontUrl = 'http://cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebBold.woff';
+
+    var fontName = 'SangSangFlowerRoad.otf';
+    var fontUrl = `../data/${fontName}`;
     loadFontFromUrl(fontUrl).then((font) => {
         new App(font);
     })
