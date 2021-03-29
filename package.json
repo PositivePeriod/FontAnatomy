@@ -1,0 +1,24 @@
+{
+  "name": "fontanatomy",
+  "version": "1.0.0",
+  "description": "KSA 2021 Graduation research conducted by 19-124 Jeuk Hwang",
+  "main": "index.js",
+  "dependencies": {
+    "opentype.js": "^1.3.3",
+    "polynomial": "^1.4.5"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PositivePeriod/FontAnatomy.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PositivePeriod/FontAnatomy/issues"
+  },
+  "homepage": "https://github.com/PositivePeriod/FontAnatomy#readme"
+}
