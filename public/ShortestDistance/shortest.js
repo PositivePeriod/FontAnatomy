@@ -11,8 +11,8 @@ var points = [
     [562, 62]
 ];
 
-var width = 960,
-    height = 500;
+var width = 960;
+var height = 500;
 
 var line = d3.svg.line()
     .interpolate("cardinal");
@@ -38,8 +38,8 @@ svg.append("rect")
     .on("mousemove", mousemoved);
 
 function mousemoved() {
-    var m = d3.mouse(this),
-        p = closestPoint(path.node(), m);
+    var m = d3.mouse(this);
+    var p = closestPoint(path.node(), m);
     line.attr("x1", p[0]).attr("y1", p[1]).attr("x2", m[0]).attr("y2", m[1]);
     circle.attr("cx", p[0]).attr("cy", p[1]);
 }

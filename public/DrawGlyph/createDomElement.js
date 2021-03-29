@@ -66,7 +66,7 @@ export function getDataFromCommands(commands) {
     var additionalLine = [];
     var firstControlPoint, secondControlPoint;
     commands.forEach((command) => {
-        switch (command.type) {
+        switch (command.type) { 
             case "M":
             case "L":
                 d += `${command.type} ${command.x} ${command.y}`;
