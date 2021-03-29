@@ -9,7 +9,7 @@ Indicate the indirect and direct points
 Indicate the edge of glyphs
 
 ### Plan
-- Get approximate area of besier curve  
+- Get approximate area of bezier curve  
 The equation must be difficult unless using approximation
 
 - Get contrast
@@ -18,7 +18,7 @@ The equation must be difficult unless using approximation
 
 ## Shortest Distance
 Copy the code from others
-Should be integrated with Drawglyph
+Should be integrated with DrawGlyph
 
 # Limitation
 단순히 glyph 모양 뿐만 아니라 이들의 vertical position도 font에 큰 영향을 준다
