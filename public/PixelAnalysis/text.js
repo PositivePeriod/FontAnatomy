@@ -48,7 +48,7 @@ export class Text {
         this.r = (stageHeight - fontSize) / 2
         this.strTop = Math.round((stageHeight - fontSize) / 2 + fontPos.actualBoundingBoxDescent);
         this.strHeight = Math.round(fontPos.actualBoundingBoxAscent + fontPos.actualBoundingBoxDescent);
-        this.dotPos(density, stageWidth, stageHeight);
+        return this.dotPos(density, stageWidth, stageHeight);
     }
 
     dotPos(density, stageWidth, stageHeight) {
@@ -85,21 +85,24 @@ export class Text {
         var nID = new ImageData(nID, stageWidth, stageHeight);
         this.ctx.putImageData(nID, 0, 0);
 
+        // TODO OPTION
         var xMax = Math.max(...xCounter);
-        xCounter = xCounter.map(value => value / xMax);
+        xCounter = xCounter.map(value => (value / xMax).toFixed(4));
         var yMax = Math.max(...yCounter);
-        yCounter = yCounter.map(value => value / yMax);
+        yCounter = yCounter.map(value => (value / yMax).toFixed(4));
         var xyMax = Math.max(...xyCounter);
-        xyCounter = xyCounter.map(value => value / xyMax);
+        xyCounter = xyCounter.map(value => (value / xyMax).toFixed(4));
 
         this.visualize(xCounter, 'x');
-        //this.visualize(yCounter, 'y');
-        //this.visualize(xyCounter, 'xy');
+        this.visualize(yCounter, 'y');
+        this.visualize(xyCounter, 'xy');
 
         console.log('stage', stageWidth, stageHeight);
         console.log('property', this.strLeft, this.strWidth, this.strTop, this.strHeight);
-        console.log('ratio', totalCounter / this.strWidth / this.strHeight)
+        var ratio = totalCounter / this.strWidth / this.strHeight
+        console.log('ratio', ratio);
 
+        return { x: xCounter, y: yCounter, xy: xyCounter, whole: ratio };
     }
 
     visualize(chartData, direction) {

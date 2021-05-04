@@ -1,4 +1,7 @@
-import { Text } from './text.js';
+// import { Text } from './text.js';
+
+
+const createCsvWriter = require('csv-writer').createObjectCsvWriter;
 
 class App {
     constructor(fontName) {
@@ -10,41 +13,25 @@ class App {
 
         window.addEventListener('resize', this.resize.bind(this), false);
         this.resize();
-
-        var data = {};
-        // const checkStr = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
-        const checkStr = '0aB'; // DEV
-        checkStr.split('').forEach(str => {
-            var strData = this.draw(str);
-            data[str] =strData;
+        const checkStr = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+        checkArray = checkStr.split('');
+        checkArray.forEach(str => {
+            this.draw(str);
         });
 
-        var link = document.createElement("a");
-        link.setAttribute("href", "data:text/plain;charset=utf-8," + encodeURI(JSON.stringify(data)));
-        link.setAttribute("download", `${this.fontName}.json`);
-        document.body.appendChild(link);
-        link.click();
-        document.body.removeChild(link);
+        var arrayContent = [["Séjour 1, é,í,ú,ü,ű"],["Séjour 2, é,í,ú,ü,ű"]];
+var csvContent = arrayContent.join("\n");
+var link = window.document.createElement("a");
+link.setAttribute("href", "data:text/csv;charset=utf-8,%EF%BB%BF" + encodeURI(csvContent));
+link.setAttribute("download", "upload_data.csv");
+link.click(); 
     }
 
-    convToCSV(data) {
-        const columnDelimiter = ',';
-        const lineDelimiter = '\n';
-        const keys = Object.keys(data[0]);
-
-        var result = '';
-        result += keys.join(columnDelimiter) + lineDelimiter;
-
-        data.forEach(strData => {
-            var ctr = 0;
-            keys.forEach(key => {
-                if (ctr > 0) { result += columnDelimiter };
-                result += strData[key];
-                ctr++;
-            });
-            result += lineDelimiter;
+    saveCSV(data) {
+        const csvWriter = createCsvWriter({
+            path: `./public/PixelAnalysis/data/${this.fontName}/${this.char}.csv`
         });
-        return result;
+        csvWriter.writeRecords(data).then(() => console.log(`Successfully save ${this.fontName}/${this.char}.csv`));
     }
 
     resize() {
@@ -63,7 +50,7 @@ class App {
             this.stageWidth * this.pixelRatio,
             this.stageHeight * this.pixelRatio
         );
-        return data
+        console.log(data);
     }
 }
 
