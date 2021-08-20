@@ -94,8 +94,8 @@ export class Text {
         xyCounter = xyCounter.map(value => (value / xyMax).toFixed(4));
 
         this.visualize(xCounter, 'x');
-        // this.visualize(yCounter, 'y');
-        // this.visualize(xyCounter, 'xy');
+        this.visualize(yCounter, 'y');
+        this.visualize(xyCounter, 'xy');
 
         console.log('stage', stageWidth, stageHeight);
         console.log('property', this.strLeft, this.strWidth, this.strTop, this.strHeight);

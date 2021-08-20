@@ -1,0 +1,31 @@
+1 13| 14| 30| 40 consonant and vowel size balance
+2 3| 4| 5| 6 uniformity of thickness,
+3 21| 28| 31 midline, shape of inner space
+4 49| 50| 51 existence of serif, serif type
+5 2| 56| 59 ‘ㄴㄹㅁㅂ’ consonant shape
+6 16| 29| 41| 71| 72 existence of decoration
+7 23| 45| 48 distance between consonant and vowel
+8 33| 43| 68 character width, proportional width
+9 1| 17| 23| 41 left-right symmetry
+10 7| 35| 42| 66| 68 talnemo
+11 2| 59 Weight
+12 10| 13| 46 horizontal slope
+13 13| 16| 39| 46| 54| 62 cursiveness
+14 14| 65| 66 closing type
+
+{
+1: {'prop': [13, 14, 30, 40], 'msg': 'consonant and vowel size balance'},
+2: {'prop': [3, 4, 5, 6], 'msg': 'uniformity of thickness,'},
+3: {'prop': [21, 28, 31], 'msg': 'midline, shape of inner space'},
+4: {'prop': [49, 50, 51], 'msg': 'existence of serif, serif type'},
+5: {'prop': [2, 56, 59], 'msg': '‘ㄴㄹㅁㅂ’ consonant shape'},
+6: {'prop': [16, 29, 41, 71, 72], 'msg': 'existence of decoration'},
+7: {'prop': [23, 45, 48], 'msg': 'distance between consonant and vowel'},
+8: {'prop': [33, 43, 68], 'msg': 'character width, proportional width'},
+9: {'prop': [1, 17, 23, 41], 'msg': 'left-right symmetry'},
+10: {'prop': [7, 35, 42, 66, 68], 'msg': 'talnemo'},
+11: {'prop': [2, 59], 'msg': 'Weight'},
+12: {'prop': [10, 13, 46], 'msg': 'horizontal slope'},
+13: {'prop': [13, 16, 39, 46, 54, 62], 'msg': 'cursiveness'},
+14: {'prop': [14, 65, 66], 'msg': 'closing type'},
+}

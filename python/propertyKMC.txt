@@ -1,0 +1,56 @@
+1 9| 56| 59| 63| 65 consonant connection
+2 34| 47| 70 internal space balance
+3 29| 30| 31| 46| 29 consonant balance
+4 73| 74| 75 decoration – inner part
+5 38| 49| 50| 7| 62 consonant and vowel slope
+6 72 decoration - outline
+7 1| 5| 6 thickness uniformity
+8 67| 48 bounding box ratio, talnemo type
+9 40| 44| 45 character width
+10 69 start position
+11 27| 41 midline
+12 7| 14| 32| 54 consonant height balance
+13 37| 64 ㅇ circle ratio
+14 57| 58 ㅅ type
+15 17 stem width ratio
+16 51| 52| 66 serif and closing
+17 3| 4 uniformity of consonant thickness
+18 10| 15| 21| 26| 39 consonant symmetry
+19 60| 61 ㄴ, ㅁtype
+20 13| 14| 33 consonant and vowel ratio
+21 16| 28 choseong jungseong jongseong position
+22 55 o dolgi type
+23 8| 19 ㅅ left - right symmetry
+24 2 thickness
+25 23 ㅁ, ㅍ left - right symmetry
+26 12| 39| 42 vertical slope
+27 11| 18| 20| 22| 24| 25| 32| 35| 36| 43| 53| 68| 71 miscellaneous
+
+{
+    1: {'prop': [9, 56, 59, 63, 65], 'msg': 'consonant connection'},
+    2: {'prop': [34, 47, 70], 'msg': 'internal space balance'},
+    3: {'prop': [29, 30, 31, 46, 29], 'msg': 'consonant balance'},
+    4: {'prop': [73, 74, 75], 'msg': 'decoration – inner part'},
+    5: {'prop': [38, 49, 50, 7, 62], 'msg': 'consonant and vowel slope'},
+    6: {'prop': [72], 'msg': 'decoration - outline'},
+    7: {'prop': [1, 5, 6], 'msg': 'thickness uniformity'},
+    9: {'prop': [40, 44, 45], 'msg': 'character width'},
+    10: {'prop': [69], 'msg': 'start position'},
+    11: {'prop': [27, 41], 'msg': 'midline'},
+    12: {'prop': [7, 14, 32, 54], 'msg': 'consonant height balance'},
+    13: {'prop': [37, 64], 'msg': 'ㅇ circle ratio'},
+    14: {'prop': [57, 58], 'msg': 'ㅅ type'},
+    15: {'prop': [17], 'msg': 'stem width ratio'},
+    16: {'prop': [51, 52, 66], 'msg': 'serif and closing'},
+    17: {'prop': [3, 4], 'msg': 'uniformity of consonant thickness'},
+    18: {'prop': [10, 15, 21, 26, 39], 'msg': 'consonant symmetry'},
+    19: {'prop': [60, 61], 'msg': 'ㄴ,ㅁtype'},
+    20: {'prop': [13, 14, 33], 'msg': 'consonant and vowel ratio'},
+    21: {'prop': [16, 28], 'msg': 'choseong jungseong jongseong position'},
+    22: {'prop': [55], 'msg': 'o dolgi type'},
+    23: {'prop': [8, 19], 'msg': 'ㅅ left-right symmetry'},
+    24: {'prop': [2], 'msg': 'thickness'},
+    25: {'prop': [23], 'msg': 'ㅁ,ㅍ left-right symmetry'},
+    26: {'prop': [12, 39, 42], 'msg': 'vertical slope'},
+    27: {'prop': [11, 18, 20, 22, 24, 25, 32, 35, 36, 43, 53, 68, 71], 'msg': 'miscellaneous'}
+}

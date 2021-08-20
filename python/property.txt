@@ -1,0 +1,153 @@
+1 two point thickness of transverse stem
+2 thickness of stem
+3 stem thickness uniformity
+4 uniformity of ‘o’ thickness
+5 ’ppichim’ thickness uniformity
+6 ‘naelijeom’ thickness uniformity
+7 vertical stem tilt
+8 ‘ㅅ ppichim’ shape
+9 ‘ㅇ,ㅎ’ opened endpoint angle
+10 horizontal stem tilt
+11 ‘ㄱ ppichim’ inclination
+12 ‘ㅎ,ㅊ’ start stem inclination
+13 choseong and jongseong height ratio
+14 choseong jungseong jongseong height ratio
+15 previous jongseong and current choseong height ratio
+16 choseong jungseong height ratio
+17 horizontal and vertical stem thickness ratio
+18 ’ppichim’ ‘naelijeom’ height ratio
+19 ‘ㅅ,ㅈ,ㅊ’ left-right symmetry
+20 vertical stem and double stem ratio
+21 ‘ㅏ,ㅑ,ㅓ,ㅕ,ㅔ,ㅖ’ upper-lower symmetry
+22 double stem height difference
+23 ‘ㅁ,ㅂ,ㅇ,ㅍ,ㅎ’ left-right symmetry
+24 ‘ㅑ,ㅕ’ side stem symmetry
+25 ‘ㅣ,ㅐ,ㅒ’ upper-lower symmetry
+26 ‘ㅗ,ㅛ,ㅜ,ㅠ,ㅡ’ left-right symmetry
+27 top, middle, bottom alignment
+28 choseong jungseong start position
+29 jungseong jongseong spacing size
+30 choseong jungseong spacing size
+31 choseong jungseong jongseong between-space ratio
+32 choseong jungseong jongseong width ratio
+33 choseong bounding-box ratio
+34 between-space in bounding-box ratio
+35 ‘를’ horizontal stem between-space ratio
+36 ‘빼’ vertical stem between-space ratio
+37 ‘o,ㅎ’ ellipse ratio
+38 ‘ㅇ,ㅎ’ symmetry
+39 vertical letter-line straight
+40 character width
+41 visual midline
+42 gap between visual midline and bottom line
+43 ’ppichim’ length (ㅈㅊ)
+44 between character space
+45 proportional width or fixed width
+46 jongseong start position
+47 difference between character high and low point
+48 talnemo feature
+49 curvature of consonant serif
+50 slope of consonant serif
+51 existence of vertical stem serif
+52 slope and shape of vertical stem serif
+53 slope of double vertical stem
+54 curvature of single vertical stem
+55 existence of ‘ㅇ,ㅎ’ dolgi(start serif)
+56 ‘ㅇ’ open or not
+57 ‘ㅅ,ㅈ’ fork position
+58 ‘ㅅ,ㅈ’ fork angle
+59 existence of connected stem
+60 degree of flexion ‘ㄴ,ㄹ,ㅁ,ㅂ’
+61 ‘ㄴ,ㄹ,ㅁ,ㅂ’ connection point type
+62 existence of contact of double consonants
+63 contact with consonant and vowel
+64 ‘ㅍ’ internal opening (closure is common)
+65 contact with horisontal and vertical stems (contact is common)
+66 existence of stem closing (not right angle)
+67 contour box ratio of whole character (8:10, 9:10, etc.)
+68 Slope of the starting positions with choseong and jungseong
+69 starting vetical positions with choseong and jungseong (choseong >= jungseong)
+70 types of internal space ( not rectangular)
+71 choseong jungseong width ratio
+72 existence of ‘l’ outline curvature
+73 existence of texture expression inside stem
+74 existence of closed outer point
+75 existence of graphic elements inside stem
+
+{
+1: "two point thickness of transverse stem",
+2: "thickness of stem",
+3: "stem thickness uniformity",
+4: "uniformity of ‘o’ thickness",
+5: "’ppichim’ thickness uniformity",
+6: "‘naelijeom’ thickness uniformity",
+7: "vertical stem tilt",
+8: "‘ㅅ ppichim’ shape",
+9: "‘ㅇ,ㅎ’ opened endpoint angle",
+10: "horizontal stem tilt",
+11: "‘ㄱ ppichim’ inclination",
+12: "‘ㅎ,ㅊ’ start stem inclination",
+13: "choseong and jongseong height ratio",
+14: "choseong jungseong jongseong height ratio",
+15: "previous jongseong and current choseong height ratio",
+16: "choseong jungseong height ratio",
+17: "horizontal and vertical stem thickness ratio",
+18: "’ppichim’ ‘naelijeom’ height ratio",
+19: "‘ㅅ,ㅈ,ㅊ’ left-right symmetry",
+20: "vertical stem and double stem ratio",
+21: "‘ㅏ,ㅑ,ㅓ,ㅕ,ㅔ,ㅖ’ upper-lower symmetry",
+22: "double stem height difference",
+23: "‘ㅁ,ㅂ,ㅇ,ㅍ,ㅎ’ left-right symmetry",
+24: "‘ㅑ,ㅕ’ side stem symmetry",
+25: "‘ㅣ,ㅐ,ㅒ’ upper-lower symmetry",
+26: "‘ㅗ,ㅛ,ㅜ,ㅠ,ㅡ’ left-right symmetry",
+27: "top, middle, bottom alignment",
+28: "choseong jungseong start position",
+29: "jungseong jongseong spacing size",
+30: "choseong jungseong spacing size",
+31: "choseong jungseong jongseong between-space ratio",
+32: "choseong jungseong jongseong width ratio",
+33: "choseong bounding-box ratio",
+34: "between-space in bounding-box ratio",
+35: "‘를’ horizontal stem between-space ratio",
+36: "‘빼’ vertical stem between-space ratio",
+37: "‘o,ㅎ’ ellipse ratio",
+38: "‘ㅇ,ㅎ’ symmetry",
+39: "vertical letter-line straight",
+40: "character width",
+41: "visual midline",
+42: "gap between visual midline and bottom line",
+43: "’ppichim’ length (ㅈㅊ)",
+44: "between character space",
+45: "proportional width or fixed width",
+46: "jongseong start position",
+47: "difference between character high and low point",
+48: "talnemo feature",
+49: "curvature of consonant serif",
+50: "slope of consonant serif",
+51: "existence of vertical stem serif",
+52: "slope and shape of vertical stem serif",
+53: "slope of double vertical stem",
+54: "curvature of single vertical stem",
+55: "existence of ‘ㅇ,ㅎ’ dolgi(start serif)",
+56: "‘ㅇ’ open or not",
+57: "‘ㅅ,ㅈ’ fork position",
+58: "‘ㅅ,ㅈ’ fork angle",
+59: "existence of connected stem",
+60: "degree of flexion ‘ㄴ,ㄹ,ㅁ,ㅂ’",
+61: "‘ㄴ,ㄹ,ㅁ,ㅂ’ connection point type",
+62: "existence of contact of double consonants",
+63: "contact with consonant and vowel",
+64: "‘ㅍ’ internal opening (closure is common)",
+65: "contact with horisontal and vertical stems (contact is common)",
+66: "existence of stem closing (not right angle)",
+67: "contour box ratio of whole character (8:10, 9:10, etc.)",
+68: "Slope of the starting positions with choseong and jungseong",
+69: "starting vetical positions with choseong and jungseong (choseong >= jungseong)",
+70: "types of internal space ( not rectangular)",
+71: "choseong jungseong width ratio",
+72: "existence of ‘l’ outline curvature",
+73: "existence of texture expression inside stem",
+74: "existence of closed outer point",
+75: "existence of graphic elements inside stem",
+}
